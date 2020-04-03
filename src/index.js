@@ -23,7 +23,7 @@ app.use(fileUpload());
 
 app.post ('/uploadFile', (req,res) =>{
     if(req.files === null){
-        return res.status(400).json({msg:'No file uploaded'});
+        return res.status(400).json({msg:'Sem arquivo para envio'});
     }
     
     const file = req.files.file;
@@ -86,11 +86,6 @@ app.get("/result", async (req,res)=>{
 
     
 })
-
-
-
-
-
 
 app.listen(porta,()=>{console.log('qualquer coisa')})
 
